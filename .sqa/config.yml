@@ -1,0 +1,70 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.4
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/grycap/im-dashboard:
+      branch: master
+      repo: https://github.com/grycap/im-dashboard
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/grycap/im-dashboard git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-fuchsia-peccary.sh
+        container: qc.acc_stinky-carmine-beagle
+  QC.Doc:
+    repos:
+      github.com/grycap/im-dashboard find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-champagne-angora.sh
+        container: qc.doc_shaky-periwinkle-ray
+      github.com/grycap/im-dashboard git:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-rose-wasp.sh
+        container: qc.doc_skinny-salmon-binturong
+      github.com/grycap/im-dashboard markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-plum-markhor.sh
+        container: qc.doc_clammy-rose-insect
+  QC.Lic:
+    repos:
+      github.com/grycap/im-dashboard licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-cornflower-molly.sh
+        container: qc.lic_muzzy-goldenrod-tamarin
+  QC.Sec:
+    repos:
+      github.com/grycap/im-dashboard bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-chestnut-harrier.sh
+        container: qc.sec_chummy-myrtle-ladybird
+  QC.Sty:
+    repos:
+      github.com/grycap/im-dashboard flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-ultramarine-bloodhound.sh
+        container: qc.sty_thirsty-lime-setter
+      github.com/grycap/im-dashboard hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-heliotrope-mouse.sh
+        container: qc.sty_scummy-xanthic-sheep
+      github.com/grycap/im-dashboard jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-mustard-alligator.sh
+        container: qc.sty_cloudy-orchid-albatross
+      github.com/grycap/im-dashboard stylelint:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-chocolate-magpie.sh
+        container: qc.sty_silly-indigo-forest
+  QC.Ver:
+    repos:
+      github.com/grycap/im-dashboard get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-taupe-molly.sh
+        container: qc.ver_bumpy-lemon-koala
+timeout: 1800
