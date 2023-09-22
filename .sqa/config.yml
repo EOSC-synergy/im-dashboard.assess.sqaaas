@@ -2,11 +2,11 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.8
+      branch: release/1.7.11
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/grycap/im-dashboard:
-      branch: master
-      repo: https://github.com/grycap/im-dashboard
+      branch: v2.5.3
+      repo: https://github.com/grycap/im-dashboard/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/grycap/im-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-cinnamon-echidna.sh
-        container: qc.acc_muggy-saffron-bulldog
+        - /usr/bin/env sh .sqa/script.greasy-cream-ferret.sh
+        container: qc.acc_hazy-ruby-hedgehog
   QC.Doc:
     repos:
       github.com/grycap/im-dashboard find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-indigo-hamster.sh
-        container: qc.doc_geeky-lime-mammoth
+        - /usr/bin/env sh .sqa/script.blurry-tan-affenpinscher.sh
+        container: qc.doc_droopy-champagne-ragdoll
       github.com/grycap/im-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-celadon-penguin.sh
-        container: qc.doc_slimy-periwinkle-mongoose
+        - /usr/bin/env sh .sqa/script.messy-bistre-bird.sh
+        container: qc.doc_trippy-orange-bandicoot
       github.com/grycap/im-dashboard markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-fuchsia-emu.sh
-        container: qc.doc_lanky-saffron-toad
+        - /usr/bin/env sh .sqa/script.silly-wisteria-crane.sh
+        container: qc.doc_skimpy-vermilion-ostrich
   QC.Lic:
     repos:
       github.com/grycap/im-dashboard licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-white-cougar.sh
-        container: qc.lic_geeky-xanthic-mule
+        - /usr/bin/env sh .sqa/script.scanty-cobalt-maltese.sh
+        container: qc.lic_smelly-saffron-dragonfly
   QC.Met:
     repos:
       github.com/grycap/im-dashboard validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-maroon-antelope.sh
-        container: qc.met_jumpy-magnolia-cuscus
+        - /usr/bin/env sh .sqa/script.sickly-carmine-binturong.sh
+        container: qc.met_breezy-saffron-kakapo
   QC.Sec:
     repos:
       github.com/grycap/im-dashboard bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-coral-ant.sh
-        container: qc.sec_pretty-aquamarine-ocelot
+        - /usr/bin/env sh .sqa/script.cloudy-seashell-snail.sh
+        container: qc.sec_chewy-eggplant-squirt
   QC.Sty:
     repos:
       github.com/grycap/im-dashboard flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-gold-termite.sh
-        container: qc.sty_tacky-platinum-kingfisher
+        - /usr/bin/env sh .sqa/script.lanky-puce-eagle.sh
+        container: qc.sty_woolly-mustard-dodo
       github.com/grycap/im-dashboard hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-alizarin-orangutan.sh
-        container: qc.sty_sunny-fuchsia-frigatebird
+        - /usr/bin/env sh .sqa/script.craggy-viridian-chamois.sh
+        container: qc.sty_stealthy-pear-wildebeest
       github.com/grycap/im-dashboard jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-red-flounder.sh
-        container: qc.sty_stealthy-aqua-stingray
+        - /usr/bin/env sh .sqa/script.goopy-jade-guppy.sh
+        container: qc.sty_skinny-buff-quoll
   QC.Ver:
     repos:
       github.com/grycap/im-dashboard get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-olivine-spider.sh
-        container: qc.ver_gummy-dandelion-stingray
+        - /usr/bin/env sh .sqa/script.hilly-vermilion-albatross.sh
+        container: qc.ver_stinky-copper-burmese
 timeout: 5400
