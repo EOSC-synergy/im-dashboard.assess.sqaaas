@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/grycap/im-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.chestnut_fearless_frog.sh
-        container: qc.acc_ecru_apathetic_chimpanzee
+        - /usr/bin/env sh .sqa/script.byzantium_gentle_panda.sh
+        container: qc.acc_gold_gracious_rhinoceros
   QC.Doc:
     repos:
       github.com/grycap/im-dashboard find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gunmetal_witty_chimpanzee.sh
-        container: qc.doc_viridian_melancholy_weasel
+        - /usr/bin/env sh .sqa/script.eggplant_driven_roc.sh
+        container: qc.doc_chartreuse_feisty_dhole
       github.com/grycap/im-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.periwinkle_harmonious_opossum.sh
-        container: qc.doc_horizon_candid_cheetah
+        - /usr/bin/env sh .sqa/script.pumpkin_happy_pegasus.sh
+        container: qc.doc_ginger_inventive_gibbon
       github.com/grycap/im-dashboard markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cerise_eager_badger.sh
-        container: qc.doc_cadet_spontaneous_porpoise
+        - /usr/bin/env sh .sqa/script.magenta_analytical_falcon.sh
+        container: qc.doc_wave_grateful_pegasus
   QC.Lic:
     repos:
       github.com/grycap/im-dashboard licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.umber_dedicated_komodo.sh
-        container: qc.lic_green_independent_eagle
+        - /usr/bin/env sh .sqa/script.brown_mature_butterfly.sh
+        container: qc.lic_ultramarine_sad_raven
   QC.Met:
     repos:
       github.com/grycap/im-dashboard validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.lime_assured_otter.sh
-        container: qc.met_claret_silly_kookaburra
+        - /usr/bin/env sh .sqa/script.royal_eccentric_crocodile.sh
+        container: qc.met_fandango_creative_wolf
   QC.Sec:
     repos:
       github.com/grycap/im-dashboard bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.echelon_foolish_quokka.sh
-        container: qc.sec_purple_responsible_antelope
+        - /usr/bin/env sh .sqa/script.mulberry_focused_lemur.sh
+        container: qc.sec_violet_daring_okapi
   QC.Sty:
     repos:
       github.com/grycap/im-dashboard flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.frost_brave_unicorn.sh
-        container: qc.sty_ice_grateful_chimpanzee
+        - /usr/bin/env sh .sqa/script.orchid_plucky_chipmunk.sh
+        container: qc.sty_boysenberry_bold_opossum
       github.com/grycap/im-dashboard hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.jet_apathetic_pelican.sh
-        container: qc.sty_fuchsia_sarcastic_orangutan
+        - /usr/bin/env sh .sqa/script.malachite_zany_anaconda.sh
+        container: qc.sty_aqua_analytical_flounder
       github.com/grycap/im-dashboard jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zinnia_serene_python.sh
-        container: qc.sty_papaya_alert_barracuda
+        - /usr/bin/env sh .sqa/script.zinnia_gentle_donkey.sh
+        container: qc.sty_banana_rational_porpoise
   QC.Uni:
     repos:
       github.com/grycap/im-dashboard pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.bronze_grateful_dolphin.sh
-        container: qc.uni_bronze_delighted_antelope
+        - /usr/bin/env sh .sqa/script.maroon_quirky_ibis.sh
+        container: qc.uni_raven_flexible_owl
   QC.Ver:
     repos:
       github.com/grycap/im-dashboard get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flint_zany_roc.sh
-        container: qc.ver_cinnabar_humble_peacock
+        - /usr/bin/env sh .sqa/script.lavender_authentic_armadillo.sh
+        container: qc.ver_white_proactive_eel
 timeout: 5400
