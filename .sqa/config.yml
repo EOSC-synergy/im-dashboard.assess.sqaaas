@@ -2,11 +2,11 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.11
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/grycap/im-dashboard:
-      branch: v2.5.3
-      repo: https://github.com/grycap/im-dashboard/
+      branch: master
+      repo: https://github.com/grycap/im-dashboard
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
@@ -15,58 +15,64 @@ sqa_criteria:
     repos:
       github.com/grycap/im-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-cream-ferret.sh
-        container: qc.acc_hazy-ruby-hedgehog
+        - /usr/bin/env sh .sqa/script.chestnut_fearless_frog.sh
+        container: qc.acc_ecru_apathetic_chimpanzee
   QC.Doc:
     repos:
       github.com/grycap/im-dashboard find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-tan-affenpinscher.sh
-        container: qc.doc_droopy-champagne-ragdoll
+        - /usr/bin/env sh .sqa/script.gunmetal_witty_chimpanzee.sh
+        container: qc.doc_viridian_melancholy_weasel
       github.com/grycap/im-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-bistre-bird.sh
-        container: qc.doc_trippy-orange-bandicoot
+        - /usr/bin/env sh .sqa/script.periwinkle_harmonious_opossum.sh
+        container: qc.doc_horizon_candid_cheetah
       github.com/grycap/im-dashboard markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-wisteria-crane.sh
-        container: qc.doc_skimpy-vermilion-ostrich
+        - /usr/bin/env sh .sqa/script.cerise_eager_badger.sh
+        container: qc.doc_cadet_spontaneous_porpoise
   QC.Lic:
     repos:
       github.com/grycap/im-dashboard licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cobalt-maltese.sh
-        container: qc.lic_smelly-saffron-dragonfly
+        - /usr/bin/env sh .sqa/script.umber_dedicated_komodo.sh
+        container: qc.lic_green_independent_eagle
   QC.Met:
     repos:
       github.com/grycap/im-dashboard validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-carmine-binturong.sh
-        container: qc.met_breezy-saffron-kakapo
+        - /usr/bin/env sh .sqa/script.lime_assured_otter.sh
+        container: qc.met_claret_silly_kookaburra
   QC.Sec:
     repos:
       github.com/grycap/im-dashboard bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-seashell-snail.sh
-        container: qc.sec_chewy-eggplant-squirt
+        - /usr/bin/env sh .sqa/script.echelon_foolish_quokka.sh
+        container: qc.sec_purple_responsible_antelope
   QC.Sty:
     repos:
       github.com/grycap/im-dashboard flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-puce-eagle.sh
-        container: qc.sty_woolly-mustard-dodo
+        - /usr/bin/env sh .sqa/script.frost_brave_unicorn.sh
+        container: qc.sty_ice_grateful_chimpanzee
       github.com/grycap/im-dashboard hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-viridian-chamois.sh
-        container: qc.sty_stealthy-pear-wildebeest
+        - /usr/bin/env sh .sqa/script.jet_apathetic_pelican.sh
+        container: qc.sty_fuchsia_sarcastic_orangutan
       github.com/grycap/im-dashboard jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-jade-guppy.sh
-        container: qc.sty_skinny-buff-quoll
+        - /usr/bin/env sh .sqa/script.zinnia_serene_python.sh
+        container: qc.sty_papaya_alert_barracuda
+  QC.Uni:
+    repos:
+      github.com/grycap/im-dashboard pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.bronze_grateful_dolphin.sh
+        container: qc.uni_bronze_delighted_antelope
   QC.Ver:
     repos:
       github.com/grycap/im-dashboard get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-vermilion-albatross.sh
-        container: qc.ver_stinky-copper-burmese
+        - /usr/bin/env sh .sqa/script.flint_zany_roc.sh
+        container: qc.ver_cinnabar_humble_peacock
 timeout: 5400
